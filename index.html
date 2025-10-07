@@ -9,13 +9,22 @@
     <header>
         <h1>Minha Loja</h1>
         <nav>
+
             <ul>
                 <li><a href="outros arquivos/cart.html" aria-label="Carrinho">🛒 Carrinho</a></li>
                 <li><a href="outros arquivos/login.php" aria-label="Login">🔐 Login</a></li>
             </ul>
-        </nav>
-    </header>
 
+        </nav>
+        <div class="user-info">
+            <p>Bem-vindo, <strong><?php echo $_SESSION["user"] ?? 'Visitante'; ?></strong></p>
+        </div>
+        <div class="cart-info">
+            <p>Itens no Carrinho: <span id="cart-count">0</span></p>
+        </div>
+
+    </header>
+    
     <main>
         <section class="products">
             <article class="product" data-id="1">
@@ -28,8 +37,33 @@
                 <button type="button" onclick="addToCart(2)">Adicionar ao Carrinho</button>
                 <button type="button" onclick="addToFavorites(2)" aria-label="Favoritar Produto 2">❤️ Favoritar</button>
             </article>
+            <article class="product" data-id="3">
+                <h2>Produto 3</h2>
+                <button type="button" onclick="addToCart(3)">Adicionar ao Carrinho</button>
+                <button type="button" onclick="addToFavorites(3)" aria-label="Favoritar Produto 3">❤️ Favoritar</button>
+            </article>
+            <article class="product" data-id="4">
+                <h2>Produto 4</h2>
+                <button type="button" onclick="addToCart(4)">Adicionar ao Carrinho</button>
+                <button type="button" onclick="addToFavorites(4)" aria-label="Favoritar Produto 4">❤️ Favoritar</button>
+            </article>
+            <article class="product" data-id="5">
+                <h2>Produto 5</h2>
+                <button type="button" onclick="addToCart(5)">Adicionar ao Carrinho</button>
+                <button type="button" onclick="addToFavorites(5)" aria-label="Favoritar Produto 5">❤️ Favoritar</button>
+            </article>
         </section>
+        <aside>
+            <h2>Categorias</h2>
+            <ul>
+                <li><a href="#">Categoria 1</a></li>
+                <li><a href="#">Categoria 2</a></li>
+                <li><a href="#">Categoria 3</a></li>
+            </ul>
+        </aside>
+
     </main>
+
 
     <script src="outros arquivos/script.js"></script>
     <footer>
