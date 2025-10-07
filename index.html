@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Loja Virtual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Minha Loja</h1>
+    <nav>
+      <a href="cart.html">🛒 Carrinho</a>
+      <a href="login.php">🔐 Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product" data-id="1">
+      <h2>Produto 1</h2>
+      <button onclick="addToCart(1)">Adicionar ao Carrinho</button>
+      <button onclick="addToFavorites(1)">❤️ Favoritar</button>
+    </div>
+    <div class="product" data-id="2">
+      <h2>Produto 2</h2>
+      <button onclick="addToCart(2)">Adicionar ao Carrinho</button>
+      <button onclick="addToFavorites(2)">❤️ Favoritar</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
