@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Carrinho</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Seu Carrinho</h1>
@@ -15,11 +15,17 @@
   <script>
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const list = document.getElementById("cart-list");
-    cart.forEach(id => {
-      const item = document.createElement("li");
-      item.textContent = "Produto " + id;
-      list.appendChild(item);
-    });
+    if (cart.length === 0) {
+      const emptyMsg = document.createElement("li");
+      emptyMsg.textContent = "Seu carrinho está vazio.";
+      list.appendChild(emptyMsg);
+    } else {
+      cart.forEach(id => {
+        const item = document.createElement("li");
+        item.textContent = "Produto " + id;
+        list.appendChild(item);
+      });
+    }
   </script>
 </body>
 </html>

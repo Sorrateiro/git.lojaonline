@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Minha Loja Virtual</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Minha Loja Virtual</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Minha Loja</h1>
-    <nav>
-      <a href="cart.html">🛒 Carrinho</a>
-      <a href="login.php">🔐 Login</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Minha Loja</h1>
+        <nav>
+            <ul>
+                <li><a href="cart.html" aria-label="Carrinho">🛒 Carrinho</a></li>
+                <li><a href="login.php" aria-label="Login">🔐 Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <div class="product" data-id="1">
-      <h2>Produto 1</h2>
-      <button onclick="addToCart(1)">Adicionar ao Carrinho</button>
-      <button onclick="addToFavorites(1)">❤️ Favoritar</button>
-    </div>
-    <div class="product" data-id="2">
-      <h2>Produto 2</h2>
-      <button onclick="addToCart(2)">Adicionar ao Carrinho</button>
-      <button onclick="addToFavorites(2)">❤️ Favoritar</button>
-    </div>
-  </main>
+    <main>
+        <section class="products">
+            <article class="product" data-id="1">
+                <h2>Produto 1</h2>
+                <button type="button" onclick="addToCart(1)">Adicionar ao Carrinho</button>
+                <button type="button" onclick="addToFavorites(1)" aria-label="Favoritar Produto 1">❤️ Favoritar</button>
+            </article>
+            <article class="product" data-id="2">
+                <h2>Produto 2</h2>
+                <button type="button" onclick="addToCart(2)">Adicionar ao Carrinho</button>
+                <button type="button" onclick="addToFavorites(2)" aria-label="Favoritar Produto 2">❤️ Favoritar</button>
+            </article>
+        </section>
+    </main>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
