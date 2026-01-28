@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Seu Carrinho</h1>
+  <ul id="cart-list"></ul>
+  <form action="checkout.php" method="POST">
+    <button type="submit">Finalizar Compra</button>
+  </form>
+
+  <script> 
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const list = document.getElementById("cart-list");
+    if (cart.length === 0) {
+      const emptyMsg = document.createElement("li");
+      emptyMsg.textContent = "Seu carrinho está vazio.";
+      list.appendChild(emptyMsg);
+    } else {
+      cart.forEach(id => {
+        const item = document.createElement("li");
+        item.textContent = "Produto " + id;
+        list.appendChild(item);
+      });
+    }
+  </script>
+</body>
+</html>
