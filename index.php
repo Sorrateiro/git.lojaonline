@@ -67,7 +67,7 @@
     </main>
 
 
-    <script src="outros arquivos/script.js"></script>
+    <script src="outrosarquivos/script.js"></script>
     <footer>
         <p>&copy; 2023 Minha Loja. Todos os direitos reservados.</p>
     </footer>
